@@ -5,6 +5,7 @@ export const ProductsContext = React.createContext({
 });
 
 export default (props) => {
+  // God bless you, ST Anthony please pray for us
   const [productsList, setProductsList] = useState([
     {
       id: 'p1',
@@ -26,6 +27,12 @@ export default (props) => {
     },
     {
       id: 'p4',
+      title: 'Orange Hat',
+      description: 'Street style! An orange hat.',
+      isFavorite: false,
+    },
+    {
+      id: 'p5',
       title: 'Orange Hat',
       description: 'Street style! An orange hat.',
       isFavorite: false,
