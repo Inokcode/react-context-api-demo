@@ -31,12 +31,6 @@ export default (props) => {
       description: 'Street style! An orange hat.',
       isFavorite: false,
     },
-    {
-      id: 'p5',
-      title: 'Orange Hat',
-      description: 'Street style! An orange hat.',
-      isFavorite: false,
-    },
   ]);
   return (
     <ProductsContext.Provider value={{ products2: productsList }}>
