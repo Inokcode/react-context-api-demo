@@ -32,6 +32,27 @@ export default (props) => {
       isFavorite: false,
     },
   ]);
+
+  //
+  const toggleFavorite = (productId) => {
+    setProductsList((currentProductList) => {
+      //
+      const prodIndex = currentProductList.findIndex((p) => p.id === productId);
+      console.log({ prodIndex });
+      const newFavStatus = currentProductList[prodIndex].isFavorite;
+      console.log({ newFavStatus });
+      const updatedProducts = [...currentProductList];
+      console.log({ updatedProducts });
+      updatedProducts[prodIndex] = {
+        ...currentProductList[prodIndex],
+        isFavorite: newFavStatus,
+      };
+      //
+      console.log({ updatedProducts });
+      return updatedProducts;
+    });
+  };
+  //
   return (
     <ProductsContext.Provider value={{ products2: productsList }}>
       {props.children}
